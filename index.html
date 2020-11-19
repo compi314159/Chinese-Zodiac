@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Chinese Zodiac</title>
+    <style>
+      body{
+          background-image: url("bg2.jpg");
+          background-size: cover;
+          text-align: center;
+        }
+      h1{
+        color: red;
+        font-family: Brush Script MT, Brush Script Std, cursive;
+        font-size: 50px;
+      }
+      #Enter{
+        color: red;
+        background-color: khaki;
+        border-color: red;
+        font-family: Brush Script MT, Brush Script Std, cursive;
+        font-size: 20px;
+      }
+      #year{
+        color: red;
+        background-color: khaki;
+        border-color: red;
+        font-family: Brush Script MT, Brush Script Std, cursive;
+        font-size: 20px;
+      }
+      ::placeholder{
+        color: red;
+      }
+    </style>
+    <script>
+
+            // Get year from user
+            // Using "if - statements" and % (mod) determine animalFinder
+            // Display animal
+
+      function animalFinder()
+      {
+        var yearValue = document.getElementById("year").value
+        if(yearValue % 12 == 0)
+          {
+            document.getElementById("pic").innerHTML = "<img src = '0monkey.png'>";
+          }
+        if(yearValue % 12 == 1)
+          {
+            document.getElementById("pic").innerHTML = "<img src = '1rooster.png'>";
+          }
+        if(yearValue % 12 == 2)
+          {
+            document.getElementById("pic").innerHTML = "<img src = '2dog.png'>";
+          }
+        if(yearValue % 12 == 3)
+          {
+            document.getElementById("pic").innerHTML = "<img src = '3pig.png'>";
+          }
+        if(yearValue % 12 == 4)
+          {
+            document.getElementById("pic").innerHTML = "<img src = '4rat.png'>";
+          }
+        if(yearValue % 12 == 5)
+          {
+            document.getElementById("pic").innerHTML = "<img src = '5ox.png'>";
+          }
+        if(yearValue % 12 == 6)
+          {
+            document.getElementById("pic").innerHTML = "<img src = '6tiger.png'>";
+          }
+          if(yearValue % 12 == 7)
+            {
+              document.getElementById("pic").innerHTML = "<img src = '7rabbit.png'>";
+            }
+          if(yearValue % 12 == 8)
+            {
+              document.getElementById("pic").innerHTML = "<img src = '8dragon.png'>";
+            }
+          if(yearValue % 12 == 9)
+            {
+              document.getElementById("pic").innerHTML = "<img src = '9snake.png'>";
+            }
+          if(yearValue % 12 == 10)
+            {
+              document.getElementById("pic").innerHTML = "<img src = '10horse.png'>";
+            }
+          if(yearValue % 12 == 11)
+            {
+              document.getElementById("pic").innerHTML = "<img src = '11goat.png'>";
+            }
+
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Chinese Zodiac</h1>
+    <input type = "text" id = "year" placeholder = "Year of birth">
+    <input type = "button" id = "Enter" value = "Enter" onclick = "animalFinder()">
+    <br>
+    <span id = "pic"></span>
+  </body>
+</html>
